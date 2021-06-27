@@ -9,9 +9,15 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.get('/', function (req, res) {
-    res.send({
-        message : "Hai"
-    })
+  res.send({
+    message : "Hai"
   })
-   
+})
+  
+app.post('/register', function (req, res) {
+  res.send({
+    message : 'Hello '+ req.body.email +' ! Your user was registered succesfully'
+  })
+})
+ 
 app.listen(3000)
